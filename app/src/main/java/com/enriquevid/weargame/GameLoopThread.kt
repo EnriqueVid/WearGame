@@ -25,8 +25,6 @@ class GameLoopThread : Thread
             dTime += System.currentTimeMillis() - prevTime
             prevTime = System.currentTimeMillis();
 
-            gView.text3 = dTime.toString()
-
             if(dTime >= 1000/FPS)
             {
                 gView.update()

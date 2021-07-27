@@ -19,6 +19,8 @@ class MainActivity : Activity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         var view: GameView = GameView(this)
+        view.isFocusable = true;
+        view.isClickable = true;
 
         view.setOnGenericMotionListener { v, ev ->
             if (ev.action == MotionEvent.ACTION_SCROLL &&
